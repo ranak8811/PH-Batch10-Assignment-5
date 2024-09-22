@@ -52,7 +52,9 @@
       <!-- navbar section starts here -->
       <nav class="flex justify-between bg-[#F9F7F3] p-5">
         <div>
-          <button class="bg-[#B4F461] px-5 py-2 rounded-md">Blog</button>
+          <button id="blogId" class="bg-[#B4F461] px-5 py-2 rounded-md">
+            Blog
+          </button>
         </div>
 
         <div class="flex items-center gap-2">
@@ -61,7 +63,7 @@
         </div>
         <div class="flex items-center gap-2">
           <h6><img src="assets/coin.png" alt="" /></h6>
-          <h6>5500 BDT</h6>
+          <h6><span id="mainAmount">5500</span> BDT</h6>
         </div>
       </nav>
       <!-- navbar section ends here -->
@@ -90,7 +92,7 @@
               class="flex gap-2 px-5 py-2 bg-[rgba(17,17,17,0.05)] border rounded-md items-center"
             >
               <h6><img src="assets/coin.png" alt="" /></h6>
-              <h6>0 BDT</h6>
+              <h6><span id="donateAmount1">0</span> BDT</h6>
             </div>
           </div>
 
@@ -107,12 +109,16 @@
           </p>
 
           <input
+            id="inputAmountId1"
             class="px-6 py-4 w-full border rounded-md placeholder:text-[15px]"
             type="number"
             placeholder="Write Donation Amount"
           />
 
-          <button class="bg-[#B4F461] text-xl px-5 py-4 rounded-md w-full">
+          <button
+            id="donateBtn1"
+            class="bg-[#B4F461] text-xl px-5 py-4 rounded-md w-full"
+          >
             Donate Now
           </button>
         </div>
