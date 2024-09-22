@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,10 +48,29 @@
   </head>
   <body class="font-lexend">
     <!-- header section starts here -->
-    <header>
+    <header class="container mx-auto">
       <!-- navbar section starts here -->
-      <nav></nav>
+      <nav class="flex justify-between bg-[#F9F7F3] p-5">
+        <div>
+          <button class="bg-[#B4F461] px-5 py-2 rounded-md">Blog</button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <h6><img src="assets/logo.png" alt="" /></h6>
+          <h6 class="hidden md:block">Donate Bangladesh</h6>
+        </div>
+        <div class="flex items-center gap-2">
+          <h6><img src="assets/coin.png" alt="" /></h6>
+          <h6>5500 BDT</h6>
+        </div>
+      </nav>
       <!-- navbar section ends here -->
+
+      <!-- header button part -->
+      <div class="text-center mt-10 space-x-4">
+        <button class="bg-[#B4F461] px-5 py-2 rounded-md">Donation</button>
+        <button class="border px-5 py-2 rounded-md">History</button>
+      </div>
     </header>
     <!-- header section ends here -->
 
