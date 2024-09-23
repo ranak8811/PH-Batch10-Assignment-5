@@ -7,24 +7,18 @@ function getHtmlElementById(id) {
 }
 
 const donationIdEl = getHtmlElementById("donationId");
-// console.log(donationIdEl);
 const historyIdEl = getHtmlElementById("historyId");
-// console.log(historyIdEl);
 
 const cardsPartIdEl = getHtmlElementById("cardsPartId");
 const historyPartIdEl = getHtmlElementById("historyPartId");
-// console.log(cardsPartIdEl);
 
 const mainAmount = document.getElementById("mainAmount");
-// console.log(mainAmount);
 const donateBtn1 = document.getElementById("donateBtn1");
 const donateBtn2 = document.getElementById("donateBtn2");
 const donateBtn3 = document.getElementById("donateBtn3");
-// console.log(donateBtn2, donateBtn3);
 
 donateBtn1.addEventListener("click", function (e) {
   const inputAmountId1 = getInputFieldValueById("inputAmountId1");
-  //   console.log(typeof inputAmountId1);
 
   if (inputAmountId1 < 0 || isNaN(inputAmountId1)) {
     return alert("Invalid input");
@@ -35,11 +29,10 @@ donateBtn1.addEventListener("click", function (e) {
   }
 
   const donateAmount1 = document.getElementById("donateAmount1");
-  donateAmount1.innerText =
-    parseFloat(donateAmount1.innerText) + inputAmountId1.toFixed(2);
-  //   console.log(typeof parseFloat(donateAmount1.innerText));
+  donateAmount1.innerText = (
+    parseFloat(donateAmount1.innerText) + inputAmountId1
+  ).toFixed(2);
 
-  //   console.log(parseFloat(mainAmount.innerText));
   mainAmount.innerText -= inputAmountId1.toFixed(2);
 
   my_modal_5.showModal();
@@ -59,7 +52,6 @@ donateBtn1.addEventListener("click", function (e) {
 
 donateBtn2.addEventListener("click", function (e) {
   const inputAmountId2 = getInputFieldValueById("inputAmountId2");
-  //   console.log(inputAmountId2);
 
   if (inputAmountId2 < 0 || isNaN(inputAmountId2)) {
     return alert("Invalid input");
@@ -70,10 +62,10 @@ donateBtn2.addEventListener("click", function (e) {
   }
 
   const donateAmount2 = document.getElementById("donateAmount2");
-  //   console.log(donateAmount2.innerText);
-  donateAmount2.innerText = inputAmountId2.toFixed(2);
+  donateAmount2.innerText = (
+    parseFloat(donateAmount2.innerText) + inputAmountId2
+  ).toFixed(2);
 
-  //   console.log(parseFloat(mainAmount.innerText));
   mainAmount.innerText -= inputAmountId2.toFixed(2);
 
   my_modal_5.showModal();
@@ -91,7 +83,6 @@ donateBtn2.addEventListener("click", function (e) {
 
 donateBtn3.addEventListener("click", function (e) {
   const inputAmountId3 = getInputFieldValueById("inputAmountId3");
-  //   console.log(inputAmountId3);
 
   if (inputAmountId3 < 0 || isNaN(inputAmountId3)) {
     return alert("Invalid input");
@@ -102,10 +93,11 @@ donateBtn3.addEventListener("click", function (e) {
   }
 
   const donateAmount3 = document.getElementById("donateAmount3");
-  //   console.log(donateAmount3.innerText);
-  donateAmount3.innerText = inputAmountId3.toFixed(2);
 
-  //   console.log(parseFloat(mainAmount.innerText));
+  donateAmount3.innerText = (
+    parseFloat(donateAmount3.innerText) + inputAmountId3
+  ).toFixed(2);
+
   mainAmount.innerText -= inputAmountId3.toFixed(2);
 
   my_modal_5.showModal();
@@ -122,7 +114,6 @@ donateBtn3.addEventListener("click", function (e) {
 });
 
 const blogIdEl = getHtmlElementById("blogId");
-// console.log(blogIdEl);
 
 blogIdEl.addEventListener("click", function (e) {
   window.location.href = "blog.html";
